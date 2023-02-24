@@ -25,11 +25,13 @@ def main ():
 	
 	# Genere un script de config cisco de config cisco pour une route statique
 
-	route.route_static (
-		reseauDest = "172.16.4.0",
-	 	reseauDestCIDR = "/22",
-		ipNextRouter = "192.168.0.1"
-	)
+	# route.route_static (
+	# 	reseauDest = "172.16.4.0",
+	#  	reseauDestCIDR = "/22",
+	# 	ipNextRouter = "192.168.0.1"
+	# )
 
 main()
 print (f'')
+
+nat_statique
