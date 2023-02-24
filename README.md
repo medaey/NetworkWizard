@@ -1,6 +1,6 @@
 # Network Wizard
  
-NetworkWizardConfigurator est une application Python pour aider les administrateurs réseau à configurer les switchs et routeurs de différentes marques, notamment Cisco, HP et Huawei.
+NetworkWizard est une application Python pour aider les administrateurs réseau à configurer les switchs et routeurs de différentes marques, notamment Cisco, HP et Huawei.
 
 # Comment installer
 1. Téléchargez et installez Python 3.8 ou une version ultérieure.
