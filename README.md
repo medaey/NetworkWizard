@@ -20,16 +20,14 @@ NetworkWizardConfigurator est une application Python pour aider les administrate
 		ipNextRouter = "192.168.0.1"
 	)
 ```
-- Resultat:
-
+2. Exécutez le fichier principal `python network_wizard.py`.
+3. Copier la configurations générées dans le terminal d'éxécution pour une utilisation ultérieure.
 ```
 enable
 configure terminal
 ip route 172.16.4.0 255.255.252.0 192.168.0.1
 end
 ```
-2. Exécutez le fichier principal `python network_wizard.py`.
-3. Copier la configurations générées dans le terminal d'éxécution pour une utilisation ultérieure.
 
 # Contribuer
 Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes :
