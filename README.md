@@ -9,7 +9,25 @@ NetworkWizardConfigurator est une application Python pour aider les administrate
 
 # Comment utiliser
 
-1. Modifier le code python de `network_wizard.py` pour appeler les fonctions désirer
+1. Modifier le code python de `network_wizard.py` pour appeler les fonctions.
+- Par exemple pour obtenir les commandes pour configurer une route static :
+
+```python
+	# Genere un script de config cisco de config cisco pour une route statique
+	route.route_static (
+		reseauDest = "172.16.4.0",
+	 	reseauDestCIDR = "/22",
+		ipNextRouter = "192.168.0.1"
+	)
+```
+- Resultat:
+
+```
+enable
+configure terminal
+ip route 172.16.4.0 255.255.252.0 192.168.0.1
+end
+```
 2. Exécutez le fichier principal `python network_wizard.py`.
 3. Copier la configurations générées dans le terminal d'éxécution pour une utilisation ultérieure.
 
@@ -22,7 +40,7 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 4. Soumettez une pull request en expliquant vos modifications et les raisons de celles-ci.
 
 # Auteur
-- Cossu Médéric
+- Cossu Médéric mederic@cossu.tech
 
 # Licence
 Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
