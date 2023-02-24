@@ -6,13 +6,12 @@ NetworkWizardConfigurator est une application Python pour aider les administrate
 1. Téléchargez et installez Python 3.8 ou une version ultérieure.
 2. Téléchargez ou clonez le code source du projet depuis GitHub.
 3. Ouvrez un terminal et accédez au répertoire du projet.
-4. Installez les dépendances requises en exécutant la commande `pip install -r requirements.txt`.
 
 # Comment utiliser
 
-1. Exécutez le fichier principal `network_wizard.py`.
-2. Suivez les instructions à l'écran pour configurer les switchs et routeurs.
-3. Enregistrez les configurations générées pour une utilisation ultérieure.
+1. Modifier le code python de `network_wizard.py` pour appeler les fonctions désirer
+2. Exécutez le fichier principal `python network_wizard.py`.
+3. Copier la configurations générées dans le terminal d'éxécution pour une utilisation ultérieure.
 
 # Contribuer
 Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes :
