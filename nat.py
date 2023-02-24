@@ -1,7 +1,8 @@
 from utils import mode_configuration
+from networks_info import get_wildcard_for_cidr
 
 # Fonction pour configurer le nat statique
-def nat_statique(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe 0/1", ipPublic:int = "192.168.1.100", ipPriver:int = "201.49.10.30"):
+def nat_statique(interfacePublic, interfacePriver, ipPublic, ipPriver):
 	mode_configuration()
 	# Configuration des interfaces inside et outside
 	print(f'interface {interfacePriver}')
@@ -15,7 +16,10 @@ def nat_statique(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe
 	print(f'end')
 
 # Fonction pour configurer le nat dynamique avec surcharge
-def nat_dynamique_overload(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe 0/1", ipNetPriver:int = "192.168.1.0", whiteCard:int = "0.0.0.255"):
+def nat_dynamique_overload(interfacePublic, interfacePriver, ipNetPriver, whiteCardCIDR):
+
+	whiteCard = get_wildcard_for_cidr(whiteCardCIDR)
+
 	mode_configuration()
 	# Configuration des interfaces inside et outside
 	print(f'interface {interfacePriver}')

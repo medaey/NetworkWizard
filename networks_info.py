@@ -35,8 +35,17 @@ networks = [
     {'slash': '/0', 'netmask': '0.0.0.0', 'wildcard': '255.255.255.255'}
 ]
 
-# Affichage des informations pour chaque réseau stocké dans la liste
-def get_network_info_for_cidr(cidr='/24'):
+# Retourne la white carte en fonction du cird
+def get_wildcard_for_cidr(cidr):
     for network in networks:
         if network['slash'] == cidr:
-            print(f"slash: {cidr}, Netmask: {network['netmask']}, Wildcard mask: {network['wildcard']}")
+            return network['wildcard']
+        
+# Retourne le masque réseau en fonction du cird
+def get_netmask_for_cidr(cidr):
+    for network in networks:
+        if network['slash'] == cidr:
+            return network['netmask']
+
+# Appel la fonction get_netmask_for_cidr
+#print(get_netmask_for_cidr("/24"))
