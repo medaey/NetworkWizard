@@ -1,5 +1,5 @@
-import networks_info
-from utils import mode_configuration
+import cisco.networks_info as networks_info
+from cisco.utils import mode_configuration
 
 def tunnel_gre (interfaceName, ipInterfaceTunnel, interfacePublic, ipPublicDestination, ipInterfaceTunnelCIDR):
 

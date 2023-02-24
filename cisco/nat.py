@@ -1,5 +1,5 @@
-from utils import mode_configuration
-from networks_info import get_wildcard_for_cidr
+from cisco.utils import mode_configuration
+from cisco.networks_info import get_wildcard_for_cidr
 
 # Fonction pour configurer le nat statique
 def nat_statique(interfacePublic, interfacePriver, ipPublic, ipPriver):

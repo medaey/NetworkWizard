@@ -1,5 +1,5 @@
-from utils import mode_configuration
-import networks_info
+from cisco.utils import mode_configuration
+import cisco.networks_info as networks_info
 
 def route_static(reseauDest, reseauDestCIDR, ipNextRouter):
 

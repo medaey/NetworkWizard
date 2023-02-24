@@ -1,7 +1,7 @@
-import nat
-import tunnel
-import route
-import networks_info
+import cisco.nat as nat
+import cisco.tunnel as tunnel
+import cisco.route as route
+import cisco.networks_info as networks_info
 
 # Fonction principale
 def main ():
