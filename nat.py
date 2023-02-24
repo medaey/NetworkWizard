@@ -15,7 +15,7 @@ def nat_statique(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe
 	print(f'end')
 
 # Fonction pour configurer le nat dynamique avec surcharge
-def nat_dynamique_overload(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe 0/1", ipNetPriver:int = "192.168.1.0", maskInverse:int = "0.0.0.255"):
+def nat_dynamique_overload(interfacePublic:int = "serial 0/0/0", interfacePriver:int = "fe 0/1", ipNetPriver:int = "192.168.1.0", whiteCard:int = "0.0.0.255"):
 	mode_configuration()
 	# Configuration des interfaces inside et outside
 	print(f'interface {interfacePriver}')
@@ -25,6 +25,6 @@ def nat_dynamique_overload(interfacePublic:int = "serial 0/0/0", interfacePriver
 	print(f'ip nat outside')
 	print(f'exit')
     # Configuration des adresses sources via ACL
-	print(f'access-list 2 permit {ipNetPriver} {maskInverse}')
+	print(f'access-list 2 permit {ipNetPriver} {whiteCard}')
 	print(f'ip nat inside source list 2 interface {interfacePublic} overload')
 	print(f'end')
