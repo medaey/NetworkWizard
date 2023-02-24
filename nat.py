@@ -16,9 +16,9 @@ def nat_statique(interfacePublic, interfacePriver, ipPublic, ipPriver):
 	print(f'end')
 
 # Fonction pour configurer le nat dynamique avec surcharge
-def nat_dynamique_overload(interfacePublic, interfacePriver, ipNetPriver, whiteCardCIDR):
+def nat_dynamique_overload(interfacePublic, interfacePriver, ipNetPriver, ipNetPriverCIDR):
 
-	whiteCard = get_wildcard_for_cidr(whiteCardCIDR)
+	whiteCard = get_wildcard_for_cidr(ipNetPriverCIDR)
 
 	mode_configuration()
 	# Configuration des interfaces inside et outside
