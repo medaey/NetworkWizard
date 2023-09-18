@@ -1,5 +1,5 @@
 # Network Wizard
- 
+
 NetworkWizard est une application Python pour aider les administrateurs réseau à configurer les switchs et routeurs de différentes marques, notamment Cisco, HP et Huawei.
 
 # Comment installer
@@ -8,7 +8,19 @@ NetworkWizard est une application Python pour aider les administrateurs réseau 
 3. Ouvrez un terminal et accédez au répertoire du projet.
 
 # Comment utiliser
+## Bash
+Il suffi exécuter le script pour génère fichier .txt qui contient les commande a copier coller dans la console de configuration de votre switch.
 
+(Ce fichier sera contenu dans le dossier arubaConfigGenerator répéter exécution génèrera un nouveau fichier )
+
+```bash
+wget https://raw.githubusercontent.com/medaey/NetworkWizard/main/network_wizard.sh
+chmod +x network_wizard.sh
+./network_wizard.sh HP-2530
+```
+
+
+## Python
 1. Modifier le code python de `network_wizard.py` pour appeler les fonctions.
 - Par exemple pour obtenir les commandes pour configurer une route static :
 
